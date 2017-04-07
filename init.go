@@ -1,6 +1,8 @@
 package ui
 
-import "core"
+import (
+	"github.com/gobly/core"
+)
 
 func CreateContext(prefix string, r *core.Router) {
 	r.AddSubRouter(prefix, initialize)

@@ -5,7 +5,7 @@ import (
 	"path"
 	"path/filepath"
 	"strings"
-	"core"
+	"github.com/gobly/core"
 )
 
 // Package path depends on the caller, this cannot be determined on loading
