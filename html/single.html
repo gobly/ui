@@ -6,6 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="/ui/static/main.css" />
 	</head>
 	<body>
+		<header>
+		{{range $module := App.Modules}}
+			<a href="{{$module.URL}}">{{$module.Name}}</a>
+		{{end}}
+		</header>
 		<main>{{template "main.html"}}</main>
 		<footer>{{template "footer.html"}}</footer>
 	</body>
