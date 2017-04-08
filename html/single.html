@@ -7,8 +7,8 @@
 	</head>
 	<body>
 		<header>
-		{{range $module := App.Modules}}
-			<a href="{{$module.URL}}">{{$module.Name}}</a>
+		{{range $url, $module := App.Modules}}
+			<a href="{{$url}}">{{$module.Name}}</a>
 		{{end}}
 		</header>
 		<main>{{template "main.html"}}</main>
