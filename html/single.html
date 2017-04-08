@@ -7,9 +7,16 @@
 	</head>
 	<body>
 		<header>
+			<ul>
 		{{range $url, $module := App.Modules}}
-			<a href="{{$url}}">{{$module.Name}}</a>
+				<li>
+					<a href="{{$url}}">{{$module.Name}}</a>
+					{{range $u, $unit := $module.Units}}
+						<a href="{{$u}}">{{$unit.Name}}</a>
+					{{end}}
+				</li>
 		{{end}}
+			</ul>
 		</header>
 		<main>{{template "main.html"}}</main>
 		<footer>{{template "footer.html"}}</footer>
